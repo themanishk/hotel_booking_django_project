@@ -1,0 +1,63 @@
+{%  load static %}
+<!DOCTYPE html>
+<title>SignUp Form</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="{% static 'styles/register_styles.css' %}" rel="stylesheet" type="text/css" media="all" />
+<!-- //Custom Theme files -->
+<!-- web font -->
+<link href="//fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i" rel="stylesheet">
+<!-- //web font -->
+    </div>
+    <nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+                                    <li class="active"><a href="/">Home</a></li>
+                                </ul>
+    </nav>
+</div>
+	<!-- main -->
+
+	<div class="main-w3layouts wrapper">
+		<h1>EMAIL VERIFICATION</h1>
+
+		<div class="main-agileinfo">
+			<div class="agileits-top">
+				<form action="resetpass2" method="POST">
+                    {%  csrf_token %}
+
+
+                    <input class="text w3lpass" type="email" name="email" placeholder="email" required="required">
+					<input class="text w3lpass" type="text" name="otp5" placeholder="OTP" required="required">
+                    <input class="text" type="password" name="password1" placeholder="Password" required="">
+					<input class="text w3lpass" type="password" name="password2" placeholder="Confirm Password" required="">
+
+					<div class="wthree-text">
+						<label class="anim">
+						</label>
+						<div class="clear"> </div>
+					</div>
+					<input type="submit" value="SUBMIT">
+				</form>
+                <div>
+                    {%  for message in messages %}
+                    <h3> {{ message }}</h3>
+                    {% endfor %}
+                </div>
+			</div>
+		</div>
+		</div>
+		<ul class="colorlib-bubbles">
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>

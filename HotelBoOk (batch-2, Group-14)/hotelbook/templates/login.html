@@ -1,0 +1,27 @@
+{%  load static %}
+<link href="{% static 'styles/login_styles.css' %}" rel="stylesheet" type="text/css" media="all" />
+</div>
+    <nav class="main_nav">
+								<ul class="d-flex flex-row align-items-start justify-content-start">
+                                    <li class="active"><a href="/">Home</a></li>
+                                </ul>
+    </nav>
+</div>
+<div class="login-page">
+
+  <div class="form">
+    <form action="login" method="POST">
+        {%  csrf_token %}
+      <input type="text" name="username" placeholder="username"/>
+      <input type="password" name="password" placeholder="password"/>
+      <button>login</button>
+      <p class="message">Not registered? <a href="register">Create an account</a></p>
+        <p class="message">Forgot password? <a href="resetpass">Reset Password</a></p>
+    </form>
+      <div>
+                    {%  for message in messages %}
+                    <h3> {{ message }}</h3>
+                    {% endfor %}
+                </div>
+  </div>
+</div>
